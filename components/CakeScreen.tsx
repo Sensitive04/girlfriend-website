@@ -52,7 +52,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
 
       checkAirBlow();
     } catch (err) {
-      alert('Microphone access is needed to blow out the candles! 🎙️');
+      alert('Microphone access is needed to blow out the candle! 🎙️');
     }
   };
 
@@ -104,40 +104,40 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
       className="bg-white/85 backdrop-blur-xl p-8 rounded-3xl shadow-2xl max-w-sm w-full border border-sky-100 flex flex-col items-center text-center relative overflow-hidden"
     >
       <h2 className="text-2xl font-bold text-slate-800 mb-1">Make a Wish! 🕯️</h2>
-      <p className="text-slate-400 text-xs mb-8">
+      <p className="text-slate-400 text-xs mb-6">
         {!isLit
           ? 'Hold the lighter button to light the candle ✨'
           : 'Blow into mic or tap flame to blow it out'}
       </p>
 
-      {/* Candle & Cake Stage Container */}
-      <div className="relative my-4 flex flex-col items-center justify-end h-[220px] w-full select-none">
+      {/* Custom Vector Cake Container */}
+      <div className="relative my-2 flex flex-col items-center justify-end h-[210px] w-full select-none">
         
-        {/* Soft Flame Aura Glow */}
+        {/* Soft Flame Ambient Light */}
         <AnimatePresence>
           {isLit && (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.6 }}
               exit={{ scale: 0, opacity: 0 }}
-              className="absolute top-2 w-28 h-28 bg-amber-300/40 rounded-full blur-xl pointer-events-none z-0"
+              className="absolute top-0 w-32 h-32 bg-amber-300/40 rounded-full blur-xl pointer-events-none z-0"
             />
           )}
         </AnimatePresence>
 
-        {/* Candle Assembly (Aligned Precisely) */}
+        {/* Candle Assembly */}
         <div 
           onClick={() => isLit && extinguishCandle()}
-          className="relative z-20 cursor-pointer flex flex-col items-center group -mb-18"
+          className="relative z-20 cursor-pointer flex flex-col items-center group -mb-1"
         >
-          {/* Flame */}
+          {/* Animated SVG Flame */}
           <AnimatePresence>
             {isLit && (
               <motion.div
                 initial={{ scale: 0, y: 10 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="relative z-30"
+                className="relative z-30 mb-0.5"
               >
                 <motion.div
                   animate={{
@@ -145,38 +145,66 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
                     rotate: [-2, 3, -1, 2, 0],
                   }}
                   transition={{ repeat: Infinity, duration: 0.5, ease: 'linear' }}
-                  className="w-5 h-9 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full blur-[0.5px] shadow-[0_0_15px_#f59e0b]"
+                  className="w-5 h-8 bg-gradient-to-t from-amber-500 via-orange-400 to-yellow-200 rounded-full blur-[0.5px] shadow-[0_0_12px_#f59e0b]"
                 >
-                  <div className="w-2 h-4 bg-white rounded-full mx-auto mt-3 blur-[0.5px]" />
+                  <div className="w-2 h-3.5 bg-white rounded-full mx-auto mt-3 blur-[0.5px]" />
                 </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
 
-          {/* Smoke on Blowout */}
+          {/* Smoke Physics on Blowout */}
           {!isLit && (
             <motion.div
               initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: [0, 0.7, 0], y: -25 }}
+              animate={{ opacity: [0, 0.7, 0], y: -20 }}
               transition={{ duration: 1.8 }}
-              className="absolute -top-6 text-slate-400 text-lg pointer-events-none"
+              className="absolute -top-5 text-slate-400 text-xs font-semibold pointer-events-none"
             >
               💨
             </motion.div>
           )}
 
-          {/* Wick */}
-          <div className="w-1 h-3 bg-slate-800 rounded-t-sm z-20" />
+          {/* Candle Wick */}
+          <div className="w-1 h-2.5 bg-slate-800 rounded-t-sm z-20" />
 
           {/* Candle Body */}
-          <div className="w-4 h-14 bg-gradient-to-r from-pink-300 via-pink-200 to-pink-300 rounded-t-sm shadow-xs border-x border-pink-300/60 relative overflow-hidden z-20">
-            <div className="w-full h-2 bg-pink-100 rounded-full opacity-80" />
+          <div className="w-3.5 h-12 bg-gradient-to-r from-sky-300 via-sky-200 to-sky-300 rounded-t-sm border-x border-sky-300/60 shadow-xs relative overflow-hidden z-20">
+            <div className="w-full h-1 bg-white/70 rounded-full" />
           </div>
         </div>
 
-        {/* Static Cake Base (Zero Animation) */}
-        <div className="relative z-10 text-9xl filter drop-shadow-md leading-none">
-          🎂
+        {/* CSS/HTML Vector Layered Cake */}
+        <div className="relative z-10 flex flex-col items-center w-48">
+          
+          {/* Top Layer Cream Drips */}
+          <div className="w-36 h-8 bg-pink-100 rounded-t-2xl shadow-inner relative flex justify-around items-end overflow-hidden border-b-2 border-pink-200/50">
+            <div className="w-4 h-4 bg-white rounded-full -mb-2" />
+            <div className="w-5 h-5 bg-white rounded-full -mb-2" />
+            <div className="w-4 h-4 bg-white rounded-full -mb-2" />
+            <div className="w-6 h-6 bg-white rounded-full -mb-3" />
+            <div className="w-4 h-4 bg-white rounded-full -mb-2" />
+          </div>
+
+          {/* Cake Middle Tier */}
+          <div className="w-40 h-10 bg-gradient-to-r from-pink-200 via-pink-100 to-pink-200 relative flex items-center justify-center border-y border-pink-300/40">
+            {/* Decorative Strawberries / Cherries */}
+            <div className="flex gap-4">
+              <span className="w-2.5 h-2.5 bg-rose-400 rounded-full shadow-xs inline-block" />
+              <span className="w-2.5 h-2.5 bg-rose-400 rounded-full shadow-xs inline-block" />
+              <span className="w-2.5 h-2.5 bg-rose-400 rounded-full shadow-xs inline-block" />
+              <span className="w-2.5 h-2.5 bg-rose-400 rounded-full shadow-xs inline-block" />
+            </div>
+          </div>
+
+          {/* Cake Bottom Tier */}
+          <div className="w-48 h-12 bg-gradient-to-r from-amber-100 via-amber-50 to-amber-100 rounded-b-2xl shadow-md border-t border-amber-200/60 relative overflow-hidden flex items-center justify-center">
+            {/* Frosting Swirl Line */}
+            <div className="w-full h-1.5 bg-white/80" />
+          </div>
+
+          {/* Cake Plate Stand */}
+          <div className="w-56 h-3 bg-slate-200/90 rounded-full shadow-md mt-0.5 border-t border-slate-300" />
         </div>
       </div>
 
@@ -199,7 +227,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
             <div className="relative z-10 flex items-center justify-center gap-2">
               <Flame className="w-4 h-4 fill-current animate-bounce" />
               <span>
-                {lightingProgress > 0 ? 'Hold to light...' : 'Press & Hold to Light Lighter 🔥'}
+                {lightingProgress > 0 ? 'Hold to light...' : 'Press & Hold to Light Candle 🔥'}
               </span>
             </div>
           </button>
