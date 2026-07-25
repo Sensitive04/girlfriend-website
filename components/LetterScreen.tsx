@@ -1,38 +1,63 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import { Heart, Sparkles, ChevronLeft, Send } from 'lucide-react';
 import { ScreenProps } from '@/types';
 
 export default function LetterScreen({ onNext }: ScreenProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      className="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-md w-full border border-sky-100 relative"
+      exit={{ opacity: 0, y: -20 }}
+      className="bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-2xl max-w-md w-full border border-sky-100 flex flex-col items-center relative overflow-hidden"
     >
-      <div className="absolute top-4 right-4 text-pink-300">
-        <Heart className="w-6 h-6 fill-current" />
+      {/* Background Soft Ambient Glow */}
+      <div className="absolute -top-12 -right-12 w-36 h-36 bg-sky-200/40 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-12 -left-12 w-36 h-36 bg-indigo-200/30 rounded-full blur-2xl pointer-events-none" />
+
+      {/* Header Accent */}
+      <div className="flex items-center gap-1.5 mb-1 z-10">
+        <Sparkles className="w-4 h-4 text-sky-500 animate-pulse" />
+        <span className="text-xs font-semibold tracking-wider text-sky-500 uppercase">
+          Special Letter 💌
+        </span>
       </div>
 
-      <h2 className="text-xl font-bold text-sky-800 mb-4">Happy Birthday ပါ...</h2>
-      
-      <div className="text-gray-700 leading-relaxed text-sm space-y-3 mb-8">
-        <p>
-          ဒီနေ့မှာ ကျရောက်တဲ့ Babe ရဲ့မွေးနေ့ကစပြီး နောင်နှစ်ပေါင်းများစွာအထိ စိတ်အေးချမ်းသာယာမှုတွေ အပြည့်အဝ ရရှိပါစေလို့ ဆုတောင်းပေးပါတယ်။
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 z-10">A Note For You ✨</h2>
+
+      {/* Scrollable Letter Card */}
+      <div className="w-full bg-gradient-to-b from-sky-50/60 to-white p-6 rounded-2xl border border-sky-100 shadow-inner max-h-[340px] overflow-y-auto mb-6 z-10 text-left custom-scrollbar">
+        <p className="text-xs text-sky-600 font-semibold mb-3">Dear Yamone,</p>
+        
+        <p className="text-slate-600 text-xs leading-relaxed mb-4">
+          Happy Birthday! I wanted to make something special just for you to remind you how much you mean to me. Every moment we share is amazing, and your smile always brightens up my day.
         </p>
-        <p>
-          Babe က အမြဲတမ်း ကိုယ့်ပတ်ဝန်းကျင်ကလူတွေကို စိတ်ချမ်းသာအောင် ထားတတ်သလို၊ Babe ရဲ့ တည်ငြိမ်ပြီး စိတ်သဘောထားကောင်းတဲ့ ပုံစံလေးကလည်း ကိုယ့်အတွက်တော့ အမြဲတမ်း အားဆေးတစ်ခုလိုပါပဲ။
+
+        <p className="text-slate-600 text-xs leading-relaxed mb-4">
+          Thank you for being such an incredible person, for all the laughter, and for all the wonderful memories we keep making together. 
         </p>
+
+        <p className="text-slate-600 text-xs leading-relaxed mb-6">
+          Wishing you a year filled with endless happiness, success, and all your favorite things. Let's make this year unforgettable!
+        </p>
+
+        <div className="pt-2 border-t border-sky-100/80 flex items-center justify-between text-xs text-slate-500">
+          <span className="italic">With all my love ❤️</span>
+          <Heart className="w-4 h-4 text-rose-500 fill-current animate-bounce" />
+        </div>
       </div>
 
-      <button
-        onClick={() => onNext('menu')}
-        className="w-full bg-sky-100 text-sky-700 py-3 rounded-2xl font-semibold text-sm hover:bg-sky-200 transition"
-      >
-        နောက်သို့
-      </button>
+      {/* Navigation Buttons */}
+      <div className="flex flex-col gap-3 w-full z-10">
+        <button
+          onClick={() => onNext('menu')}
+          className="w-full bg-slate-100 text-slate-600 py-3 rounded-2xl font-semibold text-xs hover:bg-slate-200 transition flex items-center justify-center gap-1.5"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          <span>Surprise Hub သို့ ပြန်သွားရန်</span>
+        </button>
+      </div>
     </motion.div>
   );
 }

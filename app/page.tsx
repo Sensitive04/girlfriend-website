@@ -9,6 +9,7 @@ import PasscodeScreen from '@/components/PasscodeScreen';
 import PromptScreen from '@/components/PromptScreen';
 import MenuScreen from '@/components/MenuScreen';
 import CakeScreen from '@/components/CakeScreen';
+import EnvelopeScreen from '@/components/EnvelopeScreen';
 import LetterScreen from '@/components/LetterScreen';
 
 export default function BirthdayApp() {
@@ -19,24 +20,39 @@ export default function BirthdayApp() {
       particleCount: 80,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#f472b6', '#3b82f6', '#fcd34d', '#a78bfa']
+      colors: ['#38bdf8', '#818cf8', '#f472b6', '#fcd34d'],
     });
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-pink-100 via-sky-50 to-pink-50 flex flex-col items-center justify-center p-4 relative overflow-hidden select-none">
+    <main className="min-h-screen bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-100 flex flex-col items-center justify-center p-4 relative overflow-hidden select-none">
       <AnimatePresence mode="wait">
         {currentStep === 'passcode' && (
-          <PasscodeScreen key="passcode" onNext={setCurrentStep} triggerConfetti={triggerConfetti} />
+          <PasscodeScreen
+            key="passcode"
+            onNext={setCurrentStep}
+            triggerConfetti={triggerConfetti}
+          />
         )}
         {currentStep === 'prompt' && (
-          <PromptScreen key="prompt" onNext={setCurrentStep} triggerConfetti={triggerConfetti} />
+          <PromptScreen
+            key="prompt"
+            onNext={setCurrentStep}
+            triggerConfetti={triggerConfetti}
+          />
         )}
         {currentStep === 'menu' && (
           <MenuScreen key="menu" onNext={setCurrentStep} />
         )}
         {currentStep === 'cake' && (
-          <CakeScreen key="cake" onNext={setCurrentStep} triggerConfetti={triggerConfetti} />
+          <CakeScreen
+            key="cake"
+            onNext={setCurrentStep}
+            triggerConfetti={triggerConfetti}
+          />
+        )}
+        {currentStep === 'envelope' && (
+          <EnvelopeScreen key="envelope" onNext={setCurrentStep} />
         )}
         {currentStep === 'letter' && (
           <LetterScreen key="letter" onNext={setCurrentStep} />

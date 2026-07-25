@@ -1,6 +1,12 @@
-export type Step = 'passcode' | 'prompt' | 'menu' | 'cake' | 'envelope' | 'letter';
+export type Step =
+  | 'passcode'
+  | 'prompt'
+  | 'menu'
+  | 'cake'
+  | 'envelope'
+  | 'letter';
 
 export interface ScreenProps {
-  onNext: (nextStep: Step) => void;
+  onNext: (step: Step) => void;
   triggerConfetti?: () => void;
 }
