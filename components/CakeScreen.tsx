@@ -128,7 +128,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
         {/* Candle Assembly (Aligned Precisely) */}
         <div 
           onClick={() => isLit && extinguishCandle()}
-          className="relative z-20 cursor-pointer flex flex-col items-center group -mb-8"
+          className="relative z-20 cursor-pointer flex flex-col items-center group -mb-18"
         >
           {/* Flame */}
           <AnimatePresence>
