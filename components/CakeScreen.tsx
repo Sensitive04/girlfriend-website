@@ -2,17 +2,40 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, MicOff, ChevronLeft, Flame } from 'lucide-react';
+import { Mic, MicOff, ChevronLeft, Flame, Music, VolumeX, Volume2 } from 'lucide-react';
 import { ScreenProps } from '@/types';
 
 export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
   const [isLit, setIsLit] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [lightingProgress, setLightingProgress] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
+
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
   const micStreamRef = useRef<MediaStream | null>(null);
   const holdTimerRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Audio reference for Happy Birthday music
+  const bgMusicRef = useRef<HTMLAudioElement | null>(null);
+
+  // Play/Pause background music based on candle state & mute toggle
+  useEffect(() => {
+    const bgAudio = bgMusicRef.current;
+    if (!bgAudio) return;
+
+    if (isLit) {
+      bgAudio.volume = isMuted ? 0 : 0.6;
+      bgAudio.play().catch((err) => console.log('BGM Play error:', err));
+    } else {
+      bgAudio.pause();
+      bgAudio.currentTime = 0;
+    }
+  }, [isLit, isMuted]);
+
+  const toggleMute = () => {
+    setIsMuted((prev) => !prev);
+  };
 
   const startLighting = () => {
     if (isLit) return;
@@ -93,7 +116,12 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
   };
 
   useEffect(() => {
-    return () => stopMic();
+    return () => {
+      stopMic();
+      if (bgMusicRef.current) {
+        bgMusicRef.current.pause();
+      }
+    };
   }, []);
 
   return (
@@ -101,10 +129,43 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="bg-white/85 backdrop-blur-xl p-8 rounded-3xl shadow-2xl max-w-sm w-full border border-sky-100 flex flex-col items-center text-center relative overflow-hidden"
+      className="bg-white/85 backdrop-blur-xl p-7 rounded-3xl shadow-2xl max-w-sm w-full border border-sky-100 flex flex-col items-center text-center relative overflow-hidden"
     >
-      <h2 className="text-2xl font-bold text-slate-800 mb-1">Make a Wish! 🕯️</h2>
-      <p className="text-slate-400 text-xs mb-6">
+      {/* Background Birthday Audio Track */}
+      <audio
+        ref={bgMusicRef}
+        src="/audio/hbd.mp3"
+        loop
+        preload="auto"
+      />
+
+      {/* Top Header & Mute Button */}
+      <div className="w-full flex items-center justify-between mb-1">
+        <button
+          onClick={() => onNext('menu')}
+          className="p-2 rounded-full bg-slate-100/80 text-slate-600 hover:bg-sky-100 hover:text-sky-600 transition active:scale-90 cursor-pointer"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        <h2 className="text-xl font-bold text-slate-800">Make a Wish! 🕯️</h2>
+
+        {/* Audio Indicator/Mute Toggle */}
+        <button
+          onClick={toggleMute}
+          disabled={!isLit}
+          className={`p-2 rounded-full transition cursor-pointer ${
+            isLit
+              ? 'bg-amber-100 text-amber-600 hover:bg-amber-200'
+              : 'bg-slate-100 text-slate-300 cursor-not-allowed'
+          }`}
+          title={isMuted ? 'Unmute BGM' : 'Mute BGM'}
+        >
+          {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 animate-pulse" />}
+        </button>
+      </div>
+
+      <p className="text-slate-400 text-xs mb-4">
         {!isLit
           ? 'Hold the lighter button to light the candle ✨'
           : 'Blow into mic or tap flame to blow it out'}
