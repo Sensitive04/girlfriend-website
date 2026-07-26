@@ -11,6 +11,8 @@ import MenuScreen from '@/components/MenuScreen';
 import CakeScreen from '@/components/CakeScreen';
 import EnvelopeScreen from '@/components/EnvelopeScreen';
 import LetterScreen from '@/components/LetterScreen';
+import MusicScreen from '@/components/MusicScreen';
+import PhotoGalleryScreen from '@/components/PhotoGalleryScreen';
 
 export default function BirthdayApp() {
   const [currentStep, setCurrentStep] = useState<Step>('passcode');
@@ -57,6 +59,16 @@ export default function BirthdayApp() {
         {currentStep === 'letter' && (
           <LetterScreen key="letter" onNext={setCurrentStep} />
         )}
+        {currentStep === 'music' && (
+          <MusicScreen
+            key="music"
+            onNext={setCurrentStep}
+            triggerConfetti={triggerConfetti}
+          />
+        )}
+        {currentStep === 'photos' && (
+  <PhotoGalleryScreen key="photos" onNext={setCurrentStep} />
+  )}
       </AnimatePresence>
     </main>
   );

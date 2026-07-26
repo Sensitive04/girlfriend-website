@@ -4,7 +4,9 @@ export type Step =
   | 'menu'
   | 'cake'
   | 'envelope'
-  | 'letter';
+  | 'letter'
+  | 'music'
+  | 'photos';
 
 export interface ScreenProps {
   onNext: (step: Step) => void;
