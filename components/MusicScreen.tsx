@@ -17,26 +17,106 @@ import {
 import { ScreenProps } from '@/types';
 
 const TRACKS = [
-  { id: 1, title: 'Always', artist: 'Track 01', src: '/audio/always.m4a' },
-  { id: 2, title: 'Anyone', artist: 'Track 02', src: '/audio/anyone.mp3' },
-  { id: 3, title: 'ATY', artist: 'Track 03', src: '/audio/aty.mp3' },
-  { id: 4, title: 'Ayothr', artist: 'Track 04', src: '/audio/ayothr.m4a' },
-  { id: 5, title: 'BIW', artist: 'Track 05', src: '/audio/biw.mp3' },
-  { id: 6, title: 'Blue', artist: 'Track 06', src: '/audio/blue.m4a' },
-  { id: 7, title: 'E', artist: 'Track 07', src: '/audio/e.mp3' },
-  { id: 8, title: 'IWR', artist: 'Track 08', src: '/audio/iwr.mp3' },
-  { id: 9, title: 'IYSYOU', artist: 'Track 09', src: '/audio/iysyou.mp3' },
-  { id: 10, title: 'JTWUR', artist: 'Track 10', src: '/audio/jtwur.mp3' },
-  { id: 11, title: 'MU', artist: 'Track 11', src: '/audio/mu.mp3' },
-  { id: 12, title: 'MYM', artist: 'Track 12', src: '/audio/mym.mp3' },
-  { id: 13, title: 'NGCMLFY', artist: 'Track 13', src: '/audio/ngcmlfy.mp3' },
-  { id: 14, title: 'NGSUN', artist: 'Track 14', src: '/audio/ngsun.mp3' },
-  { id: 15, title: 'Perfect', artist: 'Track 15', src: '/audio/perfect.m4a' },
-  { id: 16, title: 'Photograph', artist: 'Track 16', src: '/audio/Photograph.mp3' },
-  { id: 17, title: 'RTS', artist: 'Track 17', src: '/audio/rts.mp3' },
-  { id: 18, title: 'SYWLG', artist: 'Track 18', src: '/audio/sywlg.m4a' },
-  { id: 19, title: 'Ten', artist: 'Track 19', src: '/audio/ten.mp3' },
-  { id: 20, title: 'UIFY', artist: 'Track 20', src: '/audio/uify.m4a' },
+  {
+    "id": 1,
+    "title": "Photograph",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/Photograph.mp3"
+  },
+  {
+    "id": 2,
+    "title": "always",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/always.m4a"
+  },
+  {
+    "id": 3,
+    "title": "anyone",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/anyone.mp3"
+  },
+  {
+    "id": 4,
+    "title": "aty",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/aty.mp3"
+  },
+  {
+    "id": 5,
+    "title": "ayothr",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/ayothr.m4a"
+  },
+  {
+    "id": 6,
+    "title": "biw",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/biw.mp3"
+  },
+  {
+    "id": 7,
+    "title": "blue",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/blue.m4a"
+  },
+  {
+    "id": 8,
+    "title": "e",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/e.mp3"
+  },
+  {
+    "id": 9,
+    "title": "iwr",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/iwr.mp3"
+  },
+  {
+    "id": 10,
+    "title": "iysyou",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/iysyou.mp3"
+  },
+  {
+    "id": 11,
+    "title": "jtwur",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/jtwur.mp3"
+  },
+  {
+    "id": 12,
+    "title": "mu",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/mu.mp3"
+  },
+  {
+    "id": 13,
+    "title": "mym",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/mym.mp3"
+  },
+  {
+    "id": 14,
+    "title": "ngcmlfy",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/ngcmlfy.mp3"
+  },
+  {
+    "id": 15,
+    "title": "ngsun",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/ngsun.mp3"
+  },
+  {
+    "id": 16,
+    "title": "perfect",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/perfect.m4a"
+  },
+  {
+    "id": 17,
+    "title": "rts",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/rts.mp3"
+  },
+  {
+    "id": 18,
+    "title": "sywlg",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/sywlg.m4a"
+  },
+  {
+    "id": 19,
+    "title": "ten",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/ten.mp3"
+  },
+  {
+    "id": 20,
+    "title": "uify",
+    "src": "https://0kplubrbumifbhvi.private.blob.vercel-storage.com/uify.m4a"
+  }
 ];
 
 export default function MusicScreen({ onNext }: ScreenProps) {
@@ -178,7 +258,6 @@ export default function MusicScreen({ onNext }: ScreenProps) {
       {/* Cassette Tape Deck */}
       <div className="w-full bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 shadow-inner flex flex-col items-center mb-4 relative">
         <div className="w-full bg-gradient-to-r from-sky-400 via-indigo-400 to-pink-400 rounded-t-lg p-1.5 px-3 flex justify-between items-center text-[10px] font-mono text-slate-950 font-bold mb-3">
-          <span>{currentTrack.artist}</span>
           <span>
             TRACK {currentTrackIndex + 1 < 10 ? `0${currentTrackIndex + 1}` : currentTrackIndex + 1} / {TRACKS.length}
           </span>
