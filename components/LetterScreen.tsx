@@ -31,16 +31,13 @@ export default function LetterScreen({ onNext }: ScreenProps) {
         <p className="text-xs text-sky-600 font-semibold mb-3">ဘေဘီရေ,</p>
         
         <p className="text-slate-600 text-xs leading-relaxed mb-4">
-          Happy Birthday! I wanted to make something special just for you to remind you how much you mean to me. Every moment we share is amazing, and your smile always brightens up my day.
-        </p>
+Happy 22nd birthday ပါဘေဘီခဗျာ❤️💗🎂🎊🎉🥳 အဓိကကတော့ အသက်ဘယ်လောက်ကြီးလာလာ ကိုကို့ကလေးလေးပဲဟုတ်ပြီလား။ နောက်မွေးနေ့တွေတူတူရှိနေနိုင်အောင်ကြိုးစားကြမယ်နော်ဘေဘီ။ မွေးနေ့မှာများကြီးပျော််ရွှင်ရပြီးတော့ ခုမွေးနေ့ကနေစပြီး အလုပ်တေများကြီးလုပ် ပိုက်ဆံတေများကြီးရှာနိုင်ပြီး ကိုကို့သူဌေးမကြီးဖြစ်ပါစေ။   </p>
 
         <p className="text-slate-600 text-xs leading-relaxed mb-4">
-          Thank you for being such an incredible person, for all the laughter, and for all the wonderful memories we keep making together. 
-        </p>
+နောက်မွေးနေ့တွေလည်းအမြဲတူတူရှိနေကြမယ်ဟုတ်ပြီလား။ မွေးနေ့လက်ဆောင်တေများကြီးမပေးနိုင်သေးပေမယ့် ဒါလေးတော့ ဘေဘီကြိုက်မယ်လို့မျှော်လင့်ပါတယ်အေ။ သေချာလုပ်ပေးထားတာပါနော်ကိုကိုက။ ဟက်ပီးဘက်ဒေးပါခည ကိုကိုကများကြီးဆက်ချစ်ပြီးတော့ များကြီးပျော်အောင်ထားမယ်ကလေးလေးကို။ ကိုကို့အချစ်တေများကြီးလက်ဆောင်ယူနော် ပေပီက။ </p>
 
         <p className="text-slate-600 text-xs leading-relaxed mb-6">
-          Wishing you a year filled with endless happiness, success, and all your favorite things. Let's make this year unforgettable!
-        </p>
+ ချာရာငယ်ပါပေပီရေ များကြီးချစ်ပါတယ်ခည ပျော်ရွှင်စရာမွေးနေ့လေးဖြစ်ပါစေခဗျာ။ ကိုကိုရှိတယ်နော်ဟုတ်ပြီလား လပ်ယူ မွမွမွမွမွ❤️💗        </p>
 
         <div className="pt-2 border-t border-sky-100/80 flex items-center justify-between text-xs text-slate-500">
           <span className="italic">အဘိုးအဘွားဖြစ်တဲ့ထိချစ်မယ် ❤️</span>
