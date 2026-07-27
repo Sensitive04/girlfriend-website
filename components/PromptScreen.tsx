@@ -22,8 +22,8 @@ export default function PromptScreen({ onNext, triggerConfetti }: ScreenProps) {
     >
      
 
-      <p className="text-blue-400 font-medium text-sm tracking-wide mb-1">Hey beautiful ✨</p>
-      <h1 className="text-2xl font-bold text-blue-600 mb-6">Do you want to see your gift?</h1>
+      <p className="text-blue-400 font-medium text-sm tracking-wide mb-1">အသဲတုန်းလေးရေ✨</p>
+      <h1 className="text-2xl font-bold text-blue-600 mb-6">လက်ဆောင်လေးတေကြည့်ဖို့ ရယ်ဒီပဲလား?</h1>
       
        <motion.div 
         animate={{ y: [0, -6, 0] }}
@@ -44,7 +44,7 @@ export default function PromptScreen({ onNext, triggerConfetti }: ScreenProps) {
             exit={{ opacity: 0, scale: 0.95, y: -5 }}
             className="mb-4 text-xs font-semibold text-blue-600 bg-blue-100/80 px-4 py-2 rounded-xl border border-blue-200"
           >
-            Nice try! Saying no is not an option 😉
+            နိုးဆိုထုလိုက်မယ်နော် 😒
           </motion.div>
         )}
       </AnimatePresence>
@@ -57,14 +57,14 @@ export default function PromptScreen({ onNext, triggerConfetti }: ScreenProps) {
           }}
           className="w-full bg-linear-to-r from-blue-400 to-blue-500 text-white py-3 rounded-2xl font-semibold shadow-md shadow-blue-200 hover:scale-102 active:scale-98 transition"
         >
-          YES PLEASE
+          ကြည့်မယ်
         </button>
         
         <button
           onClick={handleNoClick}
           className="w-full bg-blue-50 text-blue-400 py-3 rounded-2xl font-semibold hover:bg-blue-100 transition text-sm active:scale-95"
         >
-          NO THANKS
+          နိုးပါ
         </button>
       </div>
     </motion.div>

@@ -8,7 +8,7 @@ import { ScreenProps } from '@/types';
 export default function PasscodeScreen({ onNext, triggerConfetti }: ScreenProps) {
   const [passcode, setPasscode] = useState('');
   const [isError, setIsError] = useState(false);
-  const CORRECT_PIN = '1234';
+  const CORRECT_PIN = '1423';
 
   const handleKeyClick = (val: string) => {
     if (passcode.length < 4) {
@@ -48,7 +48,7 @@ export default function PasscodeScreen({ onNext, triggerConfetti }: ScreenProps)
       <div className="relative group shrink-0">
         <div className="w-40 h-40 rounded-full p-1.5 bg-gradient-to-tr from-sky-400 via-blue-400 to-indigo-300 shadow-lg">
           <img
-            src="/cat-photo.jpg"
+            src="/bdgirl.png"
             alt="Aesthetic preview"
             className="w-full h-full object-cover rounded-full"
           />

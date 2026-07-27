@@ -148,7 +148,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
           <ChevronLeft className="w-5 h-5" />
         </button>
 
-        <h2 className="text-xl font-bold text-slate-800">Make a Wish! 🕯️</h2>
+        <h2 className="text-xl font-bold text-slate-800">ကြိုက်တာဆုတောင်းပါခဗျာ 🕯️</h2>
 
         {/* Audio Indicator/Mute Toggle */}
         <button
@@ -167,7 +167,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
 
       <p className="text-slate-400 text-xs mb-4">
         {!isLit
-          ? 'Hold the lighter button to light the candle ✨'
+          ? 'အောက်ကခလုတ်လေးနဲ့‌ဖယောင်း‌တိုင်မီးညှိနော်ဘေဘီ✨'
           : 'Blow into mic or tap flame to blow it out'}
       </p>
 
@@ -288,7 +288,7 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
             <div className="relative z-10 flex items-center justify-center gap-2">
               <Flame className="w-4 h-4 fill-current animate-bounce" />
               <span>
-                {lightingProgress > 0 ? 'Hold to light...' : 'Press & Hold to Light Candle 🔥'}
+                {lightingProgress > 0 ? 'ဖိထားပါ...' : 'ဖိထားပြီးဖယောင်းတိုင်မီးညှိမယ်🔥'}
               </span>
             </div>
           </button>
@@ -304,12 +304,12 @@ export default function CakeScreen({ onNext, triggerConfetti }: ScreenProps) {
             {isListening ? (
               <>
                 <Mic className="w-4 h-4" />
-                <span>Blower active! Blow into mic...</span>
+                <span>အားသွင်းပေါက်ကနေမှုတ်လို့ရပါပြီခဗျာ</span>
               </>
             ) : (
               <>
                 <MicOff className="w-4 h-4" />
-                <span>Enable Mic to Blow Candle 🎙️</span>
+                <span>လေမှုတ်ဖို့အဝင်ပေါက်ဖွင့်မယ်</span>
               </>
             )}
           </button>

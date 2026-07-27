@@ -9,51 +9,93 @@ import { ScreenProps } from '@/types';
 const PHOTOS = [
   {
     id: 1,
-    src: '/cat-photo.jpg',
-    caption: 'Best memories together ✨',
+    src: '/1.jpg',
+    caption: 'ခုထိဘလော့တုန်းပါ✨',
     date: 'Memory #1',
   },
   {
     id: 2,
-    src: '/cat-photo.jpg', // Replace with your image path (e.g. /photo2.jpg)
-    caption: 'Cute smile as always 💕',
+    src: '/2.jpg', // Replace with your image path (e.g. /photo2.jpg)
+    caption: 'အရှင်လတ်လတ်တဲ့🤣 💕',
     date: 'Memory #2',
   },
   {
     id: 3,
-    src: '/cat-photo.jpg', // Replace with your image path
-    caption: 'Another favorite moment 🌸',
+    src: '/3.jpg', // Replace with your image path
+    caption: 'ခုတော့ဒို့ကကိုကိုပါ 🌸',
     date: 'Memory #3',
   },
   {
     id: 4,
-    src: '/cat-photo.jpg',
-    caption: 'Unforgettable trip 🚗',
+    src: '/4.jpg',
+    caption: 'ကလေးမွေးခိုင်းလို့ချိတ်ကောက်တာပါ',
     date: 'Memory #4',
   },
   {
     id: 5,
-    src: '/cat-photo.jpg',
-    caption: 'Sweet moments together 🍦',
+    src: '/5.jpg',
+    caption: 'အပိုင်ဆိုတာအပိုင်ပါ😁',
     date: 'Memory #5',
   },
   {
     id: 6,
-    src: '/cat-photo.jpg',
-    caption: 'Laughing at silly jokes 😄',
+    src: '/6.jpg',
+    caption: 'သီချင်းဆိုပြပြီးသူ့အပိုင်လုပ်တော့မှာပါ',
     date: 'Memory #6',
   },
   {
     id: 7,
-    src: '/cat-photo.jpg',
-    caption: 'Cozy evening vibes ✨',
+    src: '/7.jpg',
+    caption: 'ဟီးဟီး✨',
     date: 'Memory #7',
   },
   {
     id: 8,
-    src: '/cat-photo.jpg',
-    caption: 'Forever my favorite person ❤️',
+    src: '/8.jpg',
+    caption: 'ခုတော့အသဲတုန်းလေးပါကွယ်❤️',
     date: 'Memory #8',
+  },
+  {
+    id: 9,
+    src: '/9.jpg',
+    caption: 'ထပ်နမ်းချင်သေးတယ်တော့✨',
+    date: 'Memory #1',
+  },
+  {
+    id: 10,
+    src: '/10.jpg', // Replace with your image path (e.g. /photo2.jpg)
+    caption: 'ကျောင်းကိုလာ💕',
+    date: 'Memory #2',
+  },
+  {
+    id: 11,
+    src: '/11.jpg', // Replace with your image path
+    caption: 'ကျောင်းကိုထပ်လာ 🌸',
+    date: 'Memory #3',
+  },
+  {
+    id: 12,
+    src: '/12.jpg',
+    caption: 'အာဘွားလေးရ 🚗',
+    date: 'Memory #4',
+  },
+  {
+    id: 13,
+    src: '/13.jpg',
+    caption: 'ကျောင်းကိုထပ်လာနမ်းတာပါကွယ်🍦',
+    date: 'Memory #5',
+  },
+  {
+    id: 14,
+    src: '/14.jpg',
+    caption: 'မုန့်တူတူချား😄',
+    date: 'Memory #6',
+  },
+  {
+    id: 15,
+    src: '/15.jpg',
+    caption: 'ကျောင်းမသွားခင်ဆိုင်ကိုတစ်ခေါက်✨',
+    date: 'Memory #7',
   },
 ];
 
@@ -88,7 +130,7 @@ export default function PhotoGalleryScreen({ onNext }: ScreenProps) {
         </span>
       </div>
       <h2 className="text-xl font-bold text-slate-800 mb-4 z-10 flex items-center gap-2">
-        <span>ဓာတ်ပုံအမှတ်တရများ</span>
+        <span>အမှတ်တရပုံလေးတွေပေါ့နော်</span>
         <Images className="w-5 h-5 text-pink-400" />
       </h2>
 

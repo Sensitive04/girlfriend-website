@@ -20,15 +20,15 @@ export default function LetterScreen({ onNext }: ScreenProps) {
       <div className="flex items-center gap-1.5 mb-1 z-10">
         <Sparkles className="w-4 h-4 text-sky-500 animate-pulse" />
         <span className="text-xs font-semibold tracking-wider text-sky-500 uppercase">
-          Special Letter 💌
+          မွေးနေ့အတွက်💌
         </span>
       </div>
 
-      <h2 className="text-2xl font-bold text-slate-800 mb-6 z-10">A Note For You ✨</h2>
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 z-10">ဘေဘီ့အတွက်စာလေး ✨</h2>
 
       {/* Scrollable Letter Card */}
       <div className="w-full bg-gradient-to-b from-sky-50/60 to-white p-6 rounded-2xl border border-sky-100 shadow-inner max-h-[340px] overflow-y-auto mb-6 z-10 text-left custom-scrollbar">
-        <p className="text-xs text-sky-600 font-semibold mb-3">Dear Yamone,</p>
+        <p className="text-xs text-sky-600 font-semibold mb-3">ဘေဘီရေ,</p>
         
         <p className="text-slate-600 text-xs leading-relaxed mb-4">
           Happy Birthday! I wanted to make something special just for you to remind you how much you mean to me. Every moment we share is amazing, and your smile always brightens up my day.
@@ -43,7 +43,7 @@ export default function LetterScreen({ onNext }: ScreenProps) {
         </p>
 
         <div className="pt-2 border-t border-sky-100/80 flex items-center justify-between text-xs text-slate-500">
-          <span className="italic">With all my love ❤️</span>
+          <span className="italic">အဘိုးအဘွားဖြစ်တဲ့ထိချစ်မယ် ❤️</span>
           <Heart className="w-4 h-4 text-rose-500 fill-current animate-bounce" />
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function LetterScreen({ onNext }: ScreenProps) {
           className="w-full bg-slate-100 text-slate-600 py-3 rounded-2xl font-semibold text-xs hover:bg-slate-200 transition flex items-center justify-center gap-1.5"
         >
           <ChevronLeft className="w-4 h-4" />
-          <span>Surprise Hub သို့ ပြန်သွားရန်</span>
+          <span>ရှေ့ပြန်သွားရန်</span>
         </button>
       </div>
     </motion.div>

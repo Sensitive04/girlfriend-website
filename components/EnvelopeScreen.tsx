@@ -27,12 +27,12 @@ export default function EnvelopeScreen({ onNext }: ScreenProps) {
       <div className="flex items-center gap-1.5 mb-1">
         <Sparkles className="w-4 h-4 text-sky-500 animate-pulse" />
         <span className="text-xs font-semibold tracking-wider text-sky-500 uppercase">
-          A Special Message
+          စာအိတ်လေး
         </span>
       </div>
-      <h2 className="text-2xl font-bold text-slate-800 mb-1">For Your Eyes Only 💌</h2>
+      <h2 className="text-2xl font-bold text-slate-800 mb-1">ဘေဘီ့အတွက်ပါခည💌</h2>
       <p className="text-slate-400 text-xs mb-8">
-        {!isOpen ? 'Tap the wax seal to unseal the envelope' : 'Tap the letter to read'}
+        {!isOpen ? 'အသည်းလေးကိုထိပြီးဖွင့်ပါခဗျာ' : 'စာဖတ်မယ်ဆို စာလေးကိုထိပါ 💌'}
       </p>
 
       {/* Interactive Envelope Container */}
@@ -63,12 +63,12 @@ export default function EnvelopeScreen({ onNext }: ScreenProps) {
             }`}
           >
             <div className="w-full flex justify-between items-center text-[10px] text-slate-400 font-mono">
-              <span>CONFIDENTIAL</span>
+              <span>အရေးကြီး</span>
               <Heart className="w-3 h-3 text-pink-400 fill-current" />
             </div>
 
             <div className="text-xs text-slate-600 font-medium my-auto italic">
-              "To the most special person..."
+              "အချစ်ရဆုံးကောင်မလေးအတွက်..."
             </div>
 
             <div className="w-full h-1 bg-sky-100 rounded-full" />
@@ -108,14 +108,14 @@ export default function EnvelopeScreen({ onNext }: ScreenProps) {
             className="w-full bg-gradient-to-r from-sky-400 to-blue-500 text-white py-3.5 rounded-2xl font-semibold text-xs shadow-md shadow-sky-200 hover:brightness-105 transition flex items-center justify-center gap-2"
           >
             <Mail className="w-4 h-4" />
-            <span>Read Letter 💌</span>
+            <span>စာဖတ်မယ် 💌</span>
           </button>
         ) : (
           <button
             onClick={handleOpenEnvelope}
             className="w-full bg-sky-50 text-sky-600 border border-sky-200 py-3.5 rounded-2xl font-semibold text-xs hover:bg-sky-100 transition"
           >
-            Open Envelope ✨
+            စာအိတ်ဖွင့်မယ်✨
           </button>
         )}
 

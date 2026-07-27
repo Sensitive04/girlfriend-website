@@ -8,10 +8,10 @@ export default function MenuScreen({ onNext }: ScreenProps) {
   const menuItems = [
     {
       id: 'cake' as const,
-      title: 'Birthday Cake',
-      subtitle: 'Make a wish & blow candles',
+      title: 'မွေးနေ့ကိတ်',
+      subtitle: 'ဖယောင်းတိုင်လေးပါမှုတ်ပြီးဆုတောင်းနော်ဘေဘီက',
       icon: <Cake className="w-7 h-7 text-sky-500" />,
-      badge: 'Sweet Treat 🩵',
+      badge: 'ဟီးဟီး 🩵',
       gradient: 'from-sky-50 via-blue-50 to-indigo-50',
       borderColor: 'border-sky-200/80',
       iconBg: 'bg-sky-100/80',
@@ -19,10 +19,10 @@ export default function MenuScreen({ onNext }: ScreenProps) {
     },
     {
       id: 'envelope' as const,
-      title: 'Special Letter',
-      subtitle: 'A message written for you',
+      title: 'စာအိတ်လေး',
+      subtitle: 'ဘေဘီ့အတွက် သေချာလေးရေးထားတာပေါ့နော်',
       icon: <Mail className="w-7 h-7 text-blue-500" />,
-      badge: 'For You 💙',
+      badge: 'ကလေးလေးအတွက်💙',
       gradient: 'from-blue-50 via-sky-50 to-cyan-50',
       borderColor: 'border-blue-200/80',
       iconBg: 'bg-blue-100/80',
@@ -30,10 +30,10 @@ export default function MenuScreen({ onNext }: ScreenProps) {
     },
     {
       id: 'music' as const,
-      title: 'Retro Mixtape',
-      subtitle: 'Play birthday soundtrack',
+      title: 'ဓာတ်ပြားလေး',
+      subtitle: 'ဒါလေးတေအကုန်နားထောင်ရမှာနော်ဘေဘီက',
       icon: <Disc3 className="w-7 h-7 text-indigo-500 animate-spin-slow" />,
-      badge: 'Retro Vibes 🎵',
+      badge: 'ဗဲရီးဂွတ်သီချင်းလေးတွေ🎵',
       gradient: 'from-indigo-50 via-sky-50 to-slate-50',
       borderColor: 'border-indigo-200/80',
       iconBg: 'bg-indigo-100/80',
@@ -41,10 +41,10 @@ export default function MenuScreen({ onNext }: ScreenProps) {
     },
     {
       id: 'photos' as const,
-      title: 'Photo Gallery',
-      subtitle: 'Our favorite moments & memories',
+      title: 'ပုံလေးတွေ',
+      subtitle: 'ပုံလေးတွေကတော့ဒီတိုင်းပဲကြည့်ပေါ့နော်',
       icon: <Images className="w-7 h-7 text-pink-500" />,
-      badge: 'Memories 📸',
+      badge: 'အမှတ်တရလေးတွေ📸',
       gradient: 'from-pink-50 via-rose-50 to-sky-50',
       borderColor: 'border-pink-200/80',
       iconBg: 'bg-pink-100/80',
@@ -67,13 +67,13 @@ export default function MenuScreen({ onNext }: ScreenProps) {
       <div className="flex items-center gap-2 mb-1">
         <Sparkles className="w-4 h-4 text-sky-500 animate-pulse" />
         <span className="text-xs font-semibold tracking-wider text-sky-500 uppercase">
-          Surprise Hub
+          လုံးဝ စပရိုက်
         </span>
       </div>
 
-      <h2 className="text-2xl font-bold text-slate-800 mb-2">တစ်ခုရွေးပြီးနှိပ်ပါ</h2>
+      <h2 className="text-2xl font-bold text-slate-800 mb-2">တစ်ခုရွေးပါခည</h2>
       <p className="text-slate-400 text-xs mb-8 text-center">
-        Choose a gift to open below ✨
+        အောက်ကဟာလေးတေအကုန်ကြည့်ရမှာနော်✨
       </p>
 
       {/* Interactive Options List */}
@@ -117,7 +117,7 @@ export default function MenuScreen({ onNext }: ScreenProps) {
       {/* Footer Decoration */}
       <div className="mt-8 flex items-center gap-1.5 text-xs text-sky-400">
         <Heart className="w-3.5 h-3.5 fill-current animate-bounce" />
-        <span>Made with love</span>
+        <span>သဲသဲလေးအတွက်</span>
       </div>
     </motion.div>
   );
